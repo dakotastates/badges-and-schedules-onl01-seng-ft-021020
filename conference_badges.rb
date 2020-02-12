@@ -15,7 +15,10 @@ def assign_rooms(attendees)
 end
 
 def printer(attendees)
-  batch_badge_creator(attendees).zip(assign_rooms(attendees)).each do |attendee, room|
-    puts attendee.concat(" ").concat(room)
-  end
+  batch_badge_creator(attendees).each{
+    |x| puts x
+  }
+  assign_rooms(attendees).each{
+    |x| puts x
+  }
 end
